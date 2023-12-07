@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  front-end:
+    image: techteachimage
+    ports: 
+      - 8080:8080
+    depends_on:
+      - database
+    
+  database:
+    image: mysql-database
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: rootroot
+      MYSQL_ROOTPASSWORD: rootroot
